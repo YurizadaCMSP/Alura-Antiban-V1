@@ -74,7 +74,7 @@
         align-items: center;
         z-index: 1000;
     `;
-    engrenagemStatus.innerHTML = '<img src="https://i.imgur.com/vQ2T7AY.png" alt="Status" width="30px">';
+    engrenagemStatus.innerHTML = '<img src="https://www.flaticon.com/br/icone-gratis/configuracao_3699683" alt="Status" width="30px">';
 
     // Adiciona a engrenagem à página
     document.body.appendChild(engrenagemStatus);
