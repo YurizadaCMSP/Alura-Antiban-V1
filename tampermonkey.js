@@ -58,7 +58,57 @@
         alert("Botão de próxima aula não encontrado. Verifique se você está na página correta.");
     }
 
+    // =============================================
+    // Menu Discord com mensagem em HTML
+    // =============================================
 
-    const _0x43f5=['\x68\x74\x74\x70\x73\x3A\x2F\x2F\x69\x2E\x69\x6D\x67\x75\x72\x2E\x63\x6F\x6D\x2F\x61\x2F\x53\x62\x4D\x7A\x6B\x54\x5A\x2E\x70\x6E\x67','\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72','\x63\x6C\x69\x63\x6B','\x61\x6C\x65\x72\x74','\x45\x6E\x74\x72\x65\x20\x6E\x6F\x20\x6D\x65\x75\x20\x73\x65\x72\x76\x69\x64\x6F\x72\x20\x64\x6F\x20\x44\x69\x73\x63\x6F\x72\x64\x3A\x20\x0A\x0A\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x69\x73\x63\x6F\x72\x64\x2E\x67\x67\x2F\x50\x6C\x61\x74\x66\x6F\x72\x6D\x44\x65\x73\x74\x72\x6F\x79\x65\x72','\x62\x6F\x64\x79','\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64'];const bolinhaDiscord=document[_0x43f5[6]][_0x43f5[5]](document['\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74']('\x64\x69\x76'));bolinhaDiscord['\x73\x74\x79\x6C\x65']['\x63\x73\x73\x54\x65\x78\x74']='position:fixed;bottom:20px;right:20px;width:50px;height:50px;background-color:#7289DA;border-radius:50%;cursor:pointer;display:flex;justify-content:center;align-items:center;z-index:1000';bolinhaDiscord[_0x43f5[4]]='\x3C\x69\x6D\x67\x20\x73\x72\x63\x3D\x22'+_0x43f5[0]+'\x22\x20\x61\x6C\x74\x3D\x22\x44\x69\x73\x63\x6F\x72\x64\x22\x20\x77\x69\x64\x74\x68\x3D\x22\x33\x30\x70\x78\x22\x3E';document[_0x43f5[6]][_0x43f5[5]](bolinhaDiscord);bolinhaDiscord[_0x43f5[1]](_0x43f5[2],()=>{alert(_0x43f5[3])})
+    // Cria a bolinha com o logo do Discord
+    const bolinhaDiscord = document.createElement('div');
+    bolinhaDiscord.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #7289DA;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    `;
+    bolinhaDiscord.innerHTML = '<img src="https://i.imgur.com/RfclprT.png" alt="Discord" width="30px">';
+
+    // Cria a mensagem do Discord
+    const mensagemDiscord = document.createElement('div');
+    mensagemDiscord.style.cssText = `
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        background-color: #2f3136;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000;
+        display: none;
+    `;
+    mensagemDiscord.innerHTML = `
+        <p>Entre no meu servidor do Discord:</p>
+        <a href="https://discord.gg/PlatformDestroyer" target="_blank">https://discord.gg/PlatformDestroyer</a>
+    `;
+
+    // Adiciona a bolinha e a mensagem à página
+    document.body.appendChild(bolinhaDiscord);
+    document.body.appendChild(mensagemDiscord);
+
+    // Adiciona o evento de clique na bolinha
+    bolinhaDiscord.addEventListener('click', () => {
+        if (mensagemDiscord.style.display === 'none') {
+            mensagemDiscord.style.display = 'block';
+        } else {
+            mensagemDiscord.style.display = 'none';
+        }
+    });
 
 })();
