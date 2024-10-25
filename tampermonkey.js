@@ -3,7 +3,7 @@
 // @namespace    https://cursos.alura.com.br/
 // @version      2024-10-26
 // @description  Auxilia na conclusão de aulas na Alura
-// @author       Seu Nome
+// @author       YurizadaCMSP
 // @match        https://cursos.alura.com.br/course/*/task/*
 // @icon         https://i.imgur.com/gP1LZq9.png
 // @grant        none
@@ -110,5 +110,39 @@
             mensagemDiscord.style.display = 'none';
         }
     });
+
+
+    // =============================================
+    // Simulação de comportamento humano
+    // =============================================
+
+    function simularRolagem() {
+        const alturaPagina = document.documentElement.scrollHeight;
+        const posicaoAtual = window.scrollY;
+        const novaPosicao = posicaoAtual + Math.random() * (alturaPagina - posicaoAtual);
+
+        window.scrollTo({
+            top: novaPosicao,
+            behavior: 'smooth'
+        });
+    }
+
+    function simularMovimentoMouse() {
+        const larguraTela = window.innerWidth;
+        const alturaTela = window.innerHeight;
+        const x = Math.random() * larguraTela;
+        const y = Math.random() * alturaTela;
+
+        // Simula o movimento do mouse (apenas visual)
+        const eventoMouse = new MouseEvent('mousemove', {
+            clientX: x,
+            clientY: y
+        });
+        document.dispatchEvent(eventoMouse);
+    }
+
+    // Chama as funções de simulação em intervalos aleatórios
+    setInterval(simularRolagem, Math.random() * (10000 - 5000) + 5000);
+    setInterval(simularMovimentoMouse, Math.random() * (7000 - 3000) + 3000);
 
 })();
