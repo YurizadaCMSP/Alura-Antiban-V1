@@ -1,41 +1,27 @@
-// main.js
+// main.js - Arquivo principal que integra todos os módulos
 
-// Importe as funções de cada arquivo de funcionalidade
-import { exibirPopup, fecharPopupStatus } from './funcionalidades/statusPopup.js';
-import { mostrarEngrenagem } from './funcionalidades/statusGear.js';
-import { marcarAulaComoConcluida } from './funcionalidades/marcarAula.js';
-import { mostrarMenuDiscord } from './funcionalidades/menuDiscord.js';
-import { simularComportamentoHumano } from './funcionalidades/simularHumano.js';
-import { responderPerguntasAutomaticamente } from './funcionalidades/responderPerguntas.js';
+import statusGear from './statusGear.js';
+import statusPopup from './statusPopup.js';
+import menuDiscord from './menuDiscord.js';
+import simularHumano from './simularHumano.js';
+import responderPerguntas from './responderPerguntas.js';
+import funcionalidades from './funcionalidades/funcionalidades.js';
+import marcarAula from './funcionalidades/marcarAula.js';
 
-// Função principal que será executada quando o script for carregado
-function iniciarScript() {
-  try {
-    // Exibe o pop-up inicial
-    exibirPopup('<p>Script Alura Ace iniciado!</p>');
+// Função principal para inicializar todos os módulos
+function inicializarModulos() {
+    console.log("[DEBUG] Inicializando módulos...");
 
-    // Mostra a engrenagem de status
-    mostrarEngrenagem();
+    statusGear();            // Inicializa o status do Gear
+    statusPopup();           // Inicializa o popup de status
+    menuDiscord();           // Configura o menu do Discord
+    simularHumano();         // Ativa a simulação humana
+    responderPerguntas();    // Ativa o script para responder perguntas
+    funcionalidades();       // Carrega as funcionalidades gerais
+    marcarAula();            // Marca a aula como concluída na Alura
 
-    // Marca a aula como concluída
-    marcarAulaComoConcluida();
-
-    // Mostra o menu do Discord
-    mostrarMenuDiscord();
-
-    // Simula o comportamento humano
-    simularComportamentoHumano();
-
-    // Responde as perguntas automaticamente
-    responderPerguntasAutomaticamente();
-
-  } catch (error) {
-    exibirPopup(`<p style="color:red;">Ocorreu um erro no script: ${error.message}</p>`);
-  }
+    console.log("[DEBUG] Todos os módulos foram inicializados.");
 }
 
-// Adiciona um event listener para iniciar o script quando a página for carregada
-window.addEventListener('load', iniciarScript);
-
-// Função para fechar o popup (essa função precisa ser global para ser acessada pelo botão no popup)
-window.fecharPopupStatus = fecharPopupStatus;
+// Espera o carregamento completo da página para inicializar os módulos
+window.addEventListener("load", inicializarModulos);
