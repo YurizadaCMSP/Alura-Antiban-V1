@@ -1,6 +1,6 @@
-# Alura Destroyer V2 🚀
+# Alura Anti-Ban V1 🚀
 
-**Alura Destroyer V2** é um script Tampermonkey que automatiza a conclusão de aulas na plataforma Alura, simulando o comportamento humano para evitar banimentos. 
+**Alura Anti-Ban V1** é um script Tampermonkey que automatiza a conclusão de aulas na plataforma Alura, simulando o comportamento humano para evitar banimentos. 
 
 ## Funcionalidades 🤖
 
