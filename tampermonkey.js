@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         Alura Antiban Carregador
+// @name         Alura Anti-Ban V1
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  Carrega o script Alura Antiban
-// @author       Você
+// @author       YurizadaCMSP
 // @match        https://cursos.alura.com.br/course/*/task/*
 // @grant        none
 // @require      https://aluraantibanv1.vercel.app/index.js
