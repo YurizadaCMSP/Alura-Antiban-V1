@@ -21,7 +21,7 @@
 
 * Clique no ícone do Tampermonkey no seu navegador.
 * Clique em "Criar um novo script".
-* Copie e cole o código do Alura Destroyer V2 no editor.
+* Copie e cole o código do Alura Anti-Ban V1 no editor.
 * Salve o script.
 
 **3. Acesse uma aula da Alura:**
